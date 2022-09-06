@@ -38,7 +38,7 @@ const Header = () => {
 
                 <Box mt={matches ? "0" : "16"} alignSelf="flex-start"   >
 
-                    <Text color={"turquoise"} fontSize="5xl" fontWeight="semibold">Hi, I am</Text>
+                    <Text color={"turquoise"} fontSize="5xl" fontWeight="semibold">Hello, I am</Text>
 
                     <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, green.800, pink.800)" bgClip='text'> {Name}</Text>
 
