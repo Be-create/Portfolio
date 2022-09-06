@@ -6,9 +6,12 @@ import {useColorMode} from '@chakra-ui/color-mode'
 import { Spacer } from "@chakra-ui/react";
 import { Header } from "./Header";
 import { Profile } from "./profile";
-import { Social } from "./Social";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { Skills } from "./skills";
 import {useRef} from "react"
+import { Tools } from "./Tools";
+import { Projects } from "./projects";
+import { Contact } from "./contact";
 function Main() {
   const { colorMode, toggleColorMode } = useColorMode()
    const isDark = colorMode === "dark"      
@@ -68,7 +71,12 @@ function Main() {
     .start();
   }}
 />
-        
+
+<Skills />
+<Tools />
+
+<Projects />
+        <Contact />
       </VStack>
       
     
