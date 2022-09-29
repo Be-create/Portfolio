@@ -8,16 +8,17 @@ height : 120px;
 width : 100px;
 border : 5px solid cyan ;
 border-radius : 5px;
-
+color : cyan;
+transition : transform .2s;
 &:hover {
-    background-color : red ;
+    transform : scale(1.5);
 }
 `
 
 
 const Tools= ()=>{
     return( 
-        <div style={{marginTop : "400px"}}>
+        <div style={{marginTop : "200px"}}>
             <Heading mb="36" fontSize="7xl" color="cyan" margin="auto" w="fit-content">Tools</Heading>
             <Flex wrap="wrap" gap="50px" p="5" alignItems="center" justifyContent="center">
             <div style={{ textAlign : "center", display:"block" }}>

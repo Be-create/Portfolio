@@ -1,8 +1,21 @@
-import { Image,Flex, Box, Input } from "@chakra-ui/react"
+import React from "react"
+import { Image,Flex, Box, Input, Heading } from "@chakra-ui/react"
 import footergif from "../assets/footergif.gif"
+import { ContactForm } from "./contactform"
 export const Contact = ()=> {
+    const [matches, setMatches] = React.useState(
+        window.matchMedia("(min-width: 768px)").matches
+    )
+
+    React.useEffect(() => {
+        window
+            .matchMedia("(min-width: 768px)")
+            .addEventListener('change', e => setMatches(e.matches));
+    }, []);
     return(
-        <Flex alignItems="center">
+        <div style={{marginTop :"200px"}}>
+            <Heading fontSize="7xl" m="auto" w="fit-content" color="cyan" >Contact</Heading>
+            <Flex alignItems="center" direction={matches ? "row" : "column"} >
             <Image alignSelf='center' 
                      
                      backgroundColor="aliceblack" 
@@ -10,8 +23,9 @@ export const Contact = ()=> {
                      boxSize="500px" src={footergif}
                        
                  ></Image>
-                 
+                 <ContactForm />
                  
         </Flex>
+        </div>
     )
 }

@@ -24,15 +24,19 @@ const Profile = () => {
         <Stack w="100%"  >
             
             <Box w="fit-content" alignSelf="center" >
-                <Heading fontSize="6xl" alignSelf="center" w="fit-content" m="auto" color="cyan.500" >About</Heading>
+                <Heading fontSize="6xl" alignSelf="center" w="fit-content" m="auto" color="cyan" >About</Heading>
 
-                <Flex alignSelf="center" mt="50px" w="fit-content">
-                    <Heading color="cyan.400"> Hii there </Heading>
+                <Flex alignSelf="center" alignItems="center" mt="50px" w="fit-content" direction={matches ? 'row' : 'column'}>
+                    
+                    <Flex>
+                    <Heading color="cyan"> Hii  </Heading>
                     <Image
                         src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif"
-                        boxSize="70px"
+                        boxSize="50px"
                     ></Image>
-                    <Heading color="cyan.400"> I'm </Heading>
+                    <Heading color="cyan"> I'm </Heading>
+                    </Flex>
+                   
 
                     <Heading ml="15px" fontStyle="italic" fontWeight="bold" bgGradient="linear(to-r, green.800, pink.800)" bgClip='text'> Benazir Sultana</Heading>
 
@@ -59,11 +63,11 @@ textAlign={matches ? "" : "center"}
 <Box color="aqua" fontSize="2xl" >
 
 <p>
-        I'm a Front End Developer based in Kolkata,India.
+        I'm a Fullstack Developer based in Kolkata,India.
         </p>
-        <p>My coding journey started unexpectedly in my first year of University in 2012. I went to uni for graphic design but in our first year we had to build a basic website and I thought writing code was so cool. I was hooked so I switched my degree to Web Technologies. I've been working in the industry since graduating in 2015 with a first class honours.</p>
+        <p>My coding journey started unexpectedly in my third year of college in 2021. I went to college for Physics  but in our third year we had to do solve some physics problem using c and I thought writing code was so cool. I was hooked so I joined Masai school to learn web development. I've been training in masai since last year to acquire necceessary skills .</p>
 
-        <p>Outside of work I like to spend my time walking our cocker spaniel, drinking coffee, playing golf, gaming and watching Formula 1.</p>
+        <p>Outside of work I like to spend my time reading books, drinking coffee and painting </p>
 
 </Box>
             

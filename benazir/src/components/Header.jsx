@@ -11,7 +11,7 @@ const Header = () => {
     const { colorMode } = useColorMode()
 
     const isDark = colorMode === "dark";
-    const [bigScreen] = useMediaQuery('(min-width : 600px)')
+    
     const [matches, setMatches] = React.useState(
         window.matchMedia("(min-width: 768px)").matches
     )
@@ -38,19 +38,31 @@ const Header = () => {
 
                 <Box mt={matches ? "0" : "16"} alignSelf="flex-start"   >
 
-                    <Text color={"turquoise"} fontSize="5xl" fontWeight="semibold">Hello, I am</Text>
+                    <Text color="cyan" fontSize="5xl" fontWeight="semibold">Hello, I am</Text>
 
                     <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, green.800, pink.800)" bgClip='text'> {Name}</Text>
 
-                    <Text color="cyan.400">Full Stack Web Developer with proficient Skilled in both Frontend and Backend Development for producing the Quality work</Text>
+                    <Text color="cyan">Full Stack Web Developer with proficient Skilled in both Frontend and Backend Development for producing the Quality work</Text>
 
-                    <Button mt={8} mb="10" colorScheme="linkedin" onClick={() => {
-                        window.open("")
-                    }}> Hire Me</Button>
+                    <Button mt={8} mb="10" colorScheme="linkedin" onClick={()=>{window.scrollTo(
+      {
+        top : 8000,
+        behavior : "smooth"
+      }
+    )}}> Hire Me</Button>
                     <Flex  alignSelf={matches? "flex-start" : "center"}  w="fit-content" margin={matches ? "" : "auto"}>
-                        <IconButton backgroundColor="transparent" ml={2} icon={<FaLinkedin fill="cyan.400" size={30} />}></IconButton>
-                        <IconButton backgroundColor="transparent" ml={2} icon={<FaGithub fill="cyan.400"size={30} />}></IconButton>
-                        <IconButton backgroundColor="transparent" ml={2} icon={< FiMail fill="cyan.400" size={30}/>}></IconButton>
+                        <IconButton backgroundColor="transparent" ml={2} icon={<FaLinkedin fill="cyan.400" size={30} onClick={() => {
+                        window.open("https://www.linkedin.com/in/benazir-sultana-880b7b184/")
+                    }} />}></IconButton>
+                        <IconButton backgroundColor="transparent" ml={2} icon={<FaGithub fill="cyan.400"size={30} onClick={() => {
+                        window.open("https://github.com/Be-create")
+                    }}/>}></IconButton>
+                        <IconButton backgroundColor="transparent" ml={2} icon={< FiMail fill="cyan.400" size={30} onClick={()=>{window.scrollTo(
+      {
+        top : 8000,
+        behavior : "smooth"
+      }
+    )}}/>}></IconButton>
                     </Flex>
                 </Box>
 
