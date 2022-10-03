@@ -18,7 +18,7 @@ import { Tools } from "./Tools";
 import { Projects } from "./projects";
 import { Contact } from "./contact";
 function Main() {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode('dark')
    const isDark = colorMode === "dark"      
    const [matches, setMatches] = React.useState(
     window.matchMedia("(min-width: 768px)").matches
