@@ -5,10 +5,17 @@ import { FaSun, FaMoon, FaLinkedin, FaGithub } from 'react-icons/fa'
 import {FiMail} from "react-icons/fi"
 import { IconButton } from "@chakra-ui/button";
 import React from "react"
+import { motion, useScroll, useSpring } from "framer-motion"
 import { Button, Image } from "@chakra-ui/react"
 import headgif from "../assets/headgif.gif"
 const Header = () => {
     const { colorMode } = useColorMode()
+    const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
     const isDark = colorMode === "dark";
     
@@ -23,6 +30,9 @@ const Header = () => {
     }, []);
   let Name = "Benazir sultana"
     return (
+        <motion.div initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }} >
         <Stack mb="200px" >
            {/* // <Circle visibility={matches ? "visible" : "hidden"} top="100" right="100" position="absolute" bg="blue.100" opacity="0.1" w="300px" h="300px" alignSelf="flex-end" ></Circle> */}
             <Flex direction={matches ? 'row' : 'column'}
@@ -79,7 +89,7 @@ const Header = () => {
 
 
         </Stack>
-
+        </motion.div>
     )
 }
 export { Header }

@@ -129,17 +129,9 @@ React.useEffect(() => {
         <Header>
         
         </Header>
-        <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-        >
-
-<motion.div>
-<Profile  ></Profile>
-</motion.div>
-        </motion.div>
         
+<Profile  ></Profile>
+
         
         <Typewriter
         options={{
