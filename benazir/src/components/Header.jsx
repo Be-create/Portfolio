@@ -38,26 +38,26 @@ const Header = () => {
 
                 <Box mt={matches ? "0" : "16"} alignSelf="flex-start"   >
 
-                    <Text color="cyan" fontSize="5xl" fontWeight="semibold">Hello, I am</Text>
+                    <Text color={isDark ? "#52057B": "#FFABE1" } fontSize="5xl" fontWeight="semibold">Hello, I am</Text>
 
-                    <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, green.800, pink.800)" bgClip='text'> {Name}</Text>
+                    <Text fontSize="7xl" fontWeight="bold" bgGradient={isDark ?"linear(to-r, #52057B, #892CDC,#BC6FF1)": "linear(to-r, #C689C6, #FFABE1,#FFE6F7)"} bgClip='text'> {Name}</Text>
 
-                    <Text color="cyan">Full Stack Web Developer with proficient Skilled in both Frontend and Backend Development for producing the Quality work</Text>
+                    <Text color={isDark ? "#BC6FF1": "#FFE6F7" }>Full Stack Web Developer with proficient Skilled in both Frontend and Backend Development for producing the Quality work</Text>
 
-                    <Button mt={8} mb="10" colorScheme="linkedin" onClick={()=>{window.scrollTo(
+                    <Button mt={8} mb="10" border={isDark ? "1px solid #52057B": "1px solid #FFABE1" } color={isDark ? "#52057B": "#FFABE1" } backgroundColor={isDark ? "#00000": "#937DC2" } onClick={()=>{window.scrollTo(
       {
         top : 8000,
         behavior : "smooth"
       }
     )}}> Hire Me</Button>
                     <Flex  alignSelf={matches? "flex-start" : "center"}  w="fit-content" margin={matches ? "" : "auto"}>
-                        <IconButton backgroundColor="transparent" ml={2} icon={<FaLinkedin fill="cyan.400" size={30} onClick={() => {
+                        <IconButton backgroundColor="transparent" ml={2} icon={<FaLinkedin fill={isDark ? "#52057B": "#FFABE1" } size={30} onClick={() => {
                         window.open("https://www.linkedin.com/in/benazir-sultana-880b7b184/")
                     }} />}></IconButton>
-                        <IconButton backgroundColor="transparent" ml={2} icon={<FaGithub fill="cyan.400"size={30} onClick={() => {
+                        <IconButton backgroundColor="transparent" ml={2} icon={<FaGithub fill={isDark ? "#52057B": "#FFABE1" }size={30} onClick={() => {
                         window.open("https://github.com/Be-create")
                     }}/>}></IconButton>
-                        <IconButton backgroundColor="transparent" ml={2} icon={< FiMail fill="cyan.400" size={30} onClick={()=>{window.scrollTo(
+                        <IconButton backgroundColor="transparent" ml={2} icon={< FiMail fill={isDark ? "#52057B": "#FFABE1" } size={30} onClick={()=>{window.scrollTo(
       {
         top : 8000,
         behavior : "smooth"

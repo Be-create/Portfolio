@@ -33,40 +33,40 @@ React.useEffect(() => {
 
   return (
     
-      <VStack p="5"className="App">
+      <VStack p="5"className="App" backgroundColor={isDark ? "#000000": "#937DC2"}>
         <Flex w ="100%" position="absolute" pl="5" pr="5"> 
         
-        <Heading color="cyan" >Benazir</Heading>
+        <Heading color={isDark ? "#52057B": "#C689C6" } >Benazir</Heading>
 
         <Spacer></Spacer>
-        {matches ? <Tabs variant='enclosed' color={"cyan"}>
+        {matches ? <Tabs variant='enclosed'  color={isDark ? "#52057B": "#FFABE1" }>
   <TabList>
-    <Tab onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }} onClick={()=>{window.scrollTo(
       {
         top : 0,
         behavior : "smooth"
       }
     )}}>Home</Tab>
-    <Tab onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
       {
         top : 800,
         behavior : "smooth"
       }
     )}}>About</Tab>
-    <Tab onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
       {
         top : 1600,
         behavior : "smooth"
       }
     )}}>Skills</Tab>
-    <Tab onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
       {
         top : 2800,
         behavior : "smooth"
       }
     )}}>Project</Tab>
-    <Tab onClick={()=>{window.open(
-      "https://drive.google.com/file/d/1RKoiPYRbcKQaODzLUVapr8o4FJAQ1Bdi/view?usp=sharing"
+    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.open(
+      "https://drive.google.com/file/d/1KQx3ZGjNwcXDQFu_iAVClub9bfN28MzO/view?usp=sharing"
     )}}>Resume</Tab>
   </TabList>
   
@@ -128,7 +128,7 @@ React.useEffect(() => {
         
         </Header>
         
-        <Profile ></Profile>
+        <Profile  ></Profile>
         
         <Typewriter
         options={{
@@ -137,16 +137,16 @@ React.useEffect(() => {
           loop: true,
         }}
   onInit={(typewriter) => {
-    typewriter.typeString('<strong style="color: #27ae60 ; font-size : 40px ">I am benazir </strong>')
+    typewriter.typeString('<strong style="color: #52057B; font-size : 40px ">I am Benazir </strong>')
       
     .pauseFor(1500)
     .deleteChars(8)
-    .typeString('<strong style="color: #27ae60 ; font-size : 40px "> a Developer </strong>')
+    .typeString('<strong style="color: #52057B; font-size : 40px "> a Developer </strong>')
     .pauseFor(1000)
     .deleteAll()
-    .typeString('<strong style="color: #27ae60 ; font-size : 40px ">I Love coding </strong>')
+    .typeString('<strong style="color: #52057B ; font-size : 40px ">I Love Coding </strong>')
     .deleteChars(7)
-    .typeString('<strong style="color: #27ae60 ; font-size : 40px ">Designing </strong>')
+    .typeString('<strong style="color: #52057B; font-size : 40px ">Designing </strong>')
     .pauseFor(1000)
     .deleteAll()
     .start();

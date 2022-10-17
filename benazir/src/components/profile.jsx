@@ -1,10 +1,12 @@
 import { Text, Box, Circle, Flex, Stack, Heading } from "@chakra-ui/layout"
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Textarea } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Textarea, useColorMode } from '@chakra-ui/react'
 import { Button, Image } from "@chakra-ui/react"
 import React from "react"
 
 const Profile = () => {
+    const { colorMode } = useColorMode()
 
+    const isDark = colorMode === "dark";
     const [matches, setMatches] = React.useState(
         window.matchMedia("(min-width: 768px)").matches
     )
@@ -21,24 +23,24 @@ const Profile = () => {
 
     return (
 
-        <Stack w="100%"  >
+        <Stack w="100%"   >
 
             <Box w="fit-content" alignSelf="center" >
-                <Heading fontSize="6xl" alignSelf="center" w="fit-content" m="auto" color="cyan" >About</Heading>
+                <Heading fontSize="6xl" alignSelf="center" w="fit-content" m="auto" color={isDark ? "#BC6FF1": "#FFE6F7" } >About</Heading>
 
                 <Flex alignSelf="center" alignItems="center" mt="50px" w="fit-content" direction={matches ? 'row' : 'column'}>
 
                     <Flex>
-                        <Heading color="cyan"> Hii  </Heading>
+                        <Heading color={isDark ? "#52057B": "#FFE6F7" }> Hii  </Heading>
                         <Image
                             src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif"
                             boxSize="50px"
                         ></Image>
-                        <Heading color="cyan"> I'm </Heading>
+                        <Heading color={isDark ? "#52057B": "#FFE6F7" }> I'm </Heading>
                     </Flex>
 
 
-                    <Heading ml="15px" fontStyle="italic" fontWeight="bold" bgGradient="linear(to-r, green.800, pink.800)" bgClip='text'> Benazir Sultana</Heading>
+                    <Heading ml="15px" fontStyle="italic" fontWeight="bold" bgGradient={isDark ?"linear(to-r, #52057B, #892CDC,#BC6FF1)": "linear(to-r, #C689C6, #FFABE1,#FFE6F7)"}  bgClip='text'> Benazir Sultana</Heading>
 
                 </Flex>
 
@@ -60,7 +62,7 @@ const Profile = () => {
 
 
             >
-                <Box color="aqua" fontSize="2xl" >
+                <Box color={isDark ? "#C689C6": "#FFE6F7" } fontSize="2xl" >
 
                     <p>
                         I'm a Fullstack Developer based in Kolkata,India.

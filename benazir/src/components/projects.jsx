@@ -8,14 +8,14 @@ import { SiJson } from "react-icons/si"
  height : 30px;
  width : 100px;
  border-radius : 10px;
- background-color : cyan;
+ background-color : #0000FF;
  margin-top : 20px;
  color: black;
  `
 const Header = styled.h1`
 align-items : "center";
 font-size : 30px;
-color : cyan;
+color : #0000FF;
 
 `
 const Listitem = styled.li`
@@ -40,8 +40,8 @@ export const Projects = ()=> {
     return (
          
             <div style={{marginTop : "200px",width : "100%" }}>
-                <Heading  fontSize={matches ? "7xl" : "5xl"} color="cyan" margin="auto" w="fit-content"  mb ="20" >My Projects</Heading>
-           <Div> <Heading margin="auto" w="fit-content" mb="20" color="cyan">Spotify Clone</Heading>
+                <Heading  fontSize={matches ? "7xl" : "5xl"} color="#0000FF" margin="auto" w="fit-content"  mb ="20" >My Projects</Heading>
+           <Div> <Heading margin="auto" w="fit-content" mb="20" color="#0000FF">Spotify Clone</Heading>
             
                 <Flex gap="10px" mb="10" ml="10" >
                 <Badge variant="subtle" h="8" w ="20" colorScheme="purple">
@@ -102,7 +102,7 @@ export const Projects = ()=> {
            
            
            
-            <Div> <Heading margin="auto" w="fit-content" mb="20" color="cyan">India Today Clone</Heading>
+            <Div> <Heading margin="auto" w="fit-content" mb="20" color="#0000FF">India Today Clone</Heading>
             
             <Flex gap="10px" mb="10" ml="10" wrap="wrap" >
             <Badge variant="subtle" h="8" w ="20" colorScheme="purple">
@@ -133,7 +133,7 @@ export const Projects = ()=> {
             <Image src="https://lovetoreads.com/wp-content/uploads/2020/05/1589842726_maxresdefault.jpg" style={{height : "85%" ,width : "100%"}} />
         <Flex justifyContent="space-evenly" >
         <Button onClick={() => {
-                        window.open("https://chipper-praline-efbd1e.netlify.app/")
+                        window.open("https://india-today-news.vercel.app/")
                     }} >Live</Button>
         <Button onClick={() => {
                         window.open("https://github.com/SaurabhSinghRbz/india-today-clone")
@@ -167,7 +167,7 @@ export const Projects = ()=> {
         
         </Div>
        
-        <Div> <Heading margin="auto" w="fit-content" mb="20" color="cyan">Recipe App</Heading>
+        <Div> <Heading margin="auto" w="fit-content" mb="20" color="#0000FF">Recipe App</Heading>
             
             <Flex gap="10px" mb="10" ml="10" >
             <Badge variant="subtle" h="8" w ="20" colorScheme="purple">
