@@ -6,6 +6,7 @@ import Typewriter from 'typewriter-effect';
 import {useColorMode} from '@chakra-ui/color-mode'
 import { Spacer } from "@chakra-ui/react";
 import { Header } from "./Header";
+import { motion, useScroll } from "framer-motion"
 import { Profile } from "./profile";
 import { Tabs, TabList, TabPanels, Tab, TabPanel,Menu,MenuItem,MenuList,MenuItemOption,
   MenuGroup,
@@ -19,6 +20,7 @@ import { Projects } from "./projects";
 import { Contact } from "./contact";
 function Main() {
   const { colorMode, toggleColorMode } = useColorMode('dark')
+  const { scrollYProgress } = useScroll();
    const isDark = colorMode === "dark"      
    const [matches, setMatches] = React.useState(
     window.matchMedia("(min-width: 768px)").matches
@@ -32,7 +34,7 @@ React.useEffect(() => {
    
 
   return (
-    
+   
       <VStack p="5"className="App" backgroundColor={isDark ? "#000000": "#937DC2"}>
         <Flex w ="100%" position="absolute" pl="5" pr="5"> 
         
@@ -127,8 +129,17 @@ React.useEffect(() => {
         <Header>
         
         </Header>
+        <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        >
+
+<motion.div>
+<Profile  ></Profile>
+</motion.div>
+        </motion.div>
         
-        <Profile  ></Profile>
         
         <Typewriter
         options={{
@@ -159,7 +170,7 @@ React.useEffect(() => {
 <Projects />
         <Contact />
       </VStack>
-      
+     
     
   );
 }
