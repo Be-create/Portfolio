@@ -36,7 +36,7 @@ React.useEffect(() => {
   return (
    
       <VStack p="5"className="App" backgroundColor={isDark ? "#000000": "#937DC2"}>
-        <Flex w ="100%" position="absolute" pl="5" pr="5"> 
+        <Flex w ="100%" position="fixed" pl="5" pr="5"> 
         
         <Heading color={isDark ? "#52057B": "#C689C6" } >Benazir</Heading>
 
