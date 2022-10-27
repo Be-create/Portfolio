@@ -68,7 +68,7 @@ React.useEffect(() => {
       }
     )}}>Project</Tab>
     <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.open(
-      "https://drive.google.com/file/d/1KQx3ZGjNwcXDQFu_iAVClub9bfN28MzO/view?usp=sharing"
+      "https://drive.google.com/drive/folders/12pBWjsLCsOa_6ahFUVTt23myEK-y4ZTe?usp=sharing"
     )}}>Resume</Tab>
   </TabList>
   
