@@ -54,12 +54,17 @@ const Header = () => {
 
                     <Text color={isDark ? "#BC6FF1": "#FFE6F7" }>Full Stack Web Developer with proficient Skilled in both Frontend and Backend Development for producing the Quality work</Text>
 
-                    <Button mt={8} mb="10" border={isDark ? "1px solid #52057B": "1px solid #FFABE1" } color={isDark ? "#52057B": "#FFABE1" } backgroundColor={isDark ? "#00000": "#937DC2" } onClick={()=>{window.scrollTo(
+                    <motion.button
+                    style={{borderRadius:"10px", padding:"10px", color:isDark ? "#52057B": "#FFABE1" , border: isDark ? "1px solid #52057B": "1px solid #FFABE1", marginTop:" 8px",marginBottom:"10px", backgroundColor: isDark ? "#00000": "#937DC2" }}
+                     
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    onClick={()=>{window.scrollTo(
       {
         top : 8000,
         behavior : "smooth"
       }
-    )}}> Hire Me</Button>
+    )}}> Hire Me</motion.button>
                     <Flex  alignSelf={matches? "flex-start" : "center"}  w="fit-content" margin={matches ? "" : "auto"}>
                         <IconButton backgroundColor="transparent" ml={2} icon={<FaLinkedin fill={isDark ? "#52057B": "#FFABE1" } size={30} onClick={() => {
                         window.open("https://www.linkedin.com/in/benazir-sultana-880b7b184/")

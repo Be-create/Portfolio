@@ -18,6 +18,7 @@ import {useRef} from "react"
 import { Tools } from "./Tools";
 import { Projects } from "./projects";
 import { Contact } from "./contact";
+import { Card } from './card';
 function Main() {
   const { colorMode, toggleColorMode } = useColorMode('dark')
   const { scrollYProgress } = useScroll();
@@ -85,7 +86,10 @@ React.useEffect(() => {
         top : 0,
         behavior : "smooth"
       }
-    )}}>
+    )}}
+    
+    
+    >
       Home
     </MenuItem>
     <MenuItem onClick={()=>{window.scrollTo(
@@ -161,6 +165,8 @@ React.useEffect(() => {
 
 <Projects />
         <Contact />
+
+        <Card/>
       </VStack>
      
     

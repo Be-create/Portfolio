@@ -1,5 +1,5 @@
 import React from "react"
-
+import { motion } from "framer-motion"
 import { Box, Stack, Badge, VStack, Flex, Heading, Image, useColorMode } from "@chakra-ui/react"
 import { FaHtml5, FaCss3, FaJsSquare, FaReact, FaRedux, FaNodeJs, FaExpressJs, FaMongoDb, FaJsonServer, FaChakraUI, FaMaterialui, FaStinked, FaBootstrap, FaJs } from "react-icons/fa"
 import styled from "styled-components"
@@ -21,10 +21,15 @@ color : #0000FF;
 const Listitem = styled.li`
 `
 const Div = styled.div`
+background-color: black;
 padding : 20px;
-border : 5px solid black;
+border : 5px solid #52057B;
 height : fit-content;
 margin-bottom : 50px;
+transition : transform .2s;
+&:hover {
+    transform : background-color:#52057B;
+}
 `
 export const Projects = () => {
     const { colorMode } = useColorMode()
@@ -44,7 +49,7 @@ export const Projects = () => {
 
         <div style={{ marginTop: "200px", width: "100%" }}>
             <Heading fontSize={matches ? "7xl" : "5xl"} color={isDark ? "#52057B" : "#FFE6F7"} margin="auto" w="fit-content" mb="20" >My Projects</Heading>
-            <Div> <Heading margin="auto" w="fit-content" mb="20" color={isDark ? "#52057B" : "#FFE6F7"} >Spotify Clone</Heading>
+            <Div > <Heading margin="auto" w="fit-content" mb="20" color={isDark ? "#52057B" : "#FFE6F7"} >Spotify Clone</Heading>
 
                 <Flex gap="10px" mb="10" ml="10" >
                     <Badge variant="subtle" h="8" w="20" colorScheme="purple">
