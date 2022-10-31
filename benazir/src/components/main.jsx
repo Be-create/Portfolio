@@ -18,7 +18,6 @@ import {useRef} from "react"
 import { Tools } from "./Tools";
 import { Projects } from "./projects";
 import { Contact } from "./contact";
-import { Card } from './card';
 function Main() {
   const { colorMode, toggleColorMode } = useColorMode('dark')
   const { scrollYProgress } = useScroll();
@@ -126,7 +125,7 @@ React.useEffect(() => {
     </MenuItem>
   </MenuList>
 </Menu>}
-        <IconButton ml={8}onClick={toggleColorMode} icon={isDark ? <FaSun fill="cyan.400"/> : <FaMoon fill="cyan.400"/>}> Toggle {colorMode === 'light' ? 'Dark' : 'Light'}</IconButton>
+        <IconButton ml={8}onClick={toggleColorMode} icon={isDark ? <FaSun style={{fill:"#52057B"}}/> : <FaMoon style={{fill:"darkorchid"}}/>}> Toggle {colorMode === 'light' ? 'Dark' : 'Light'}</IconButton>
         
         </Flex>
         
@@ -166,7 +165,7 @@ React.useEffect(() => {
 <Projects />
         <Contact />
 
-        <Card/>
+        
       </VStack>
      
     
