@@ -26,21 +26,21 @@ const Profile = () => {
         <Stack w="100%"   >
 
             <Box w="fit-content" alignSelf="center" >
-                <Heading fontSize="6xl" alignSelf="center" w="fit-content" m="auto" color={isDark ? "#BC6FF1": "#FFE6F7" } >About</Heading>
+                <Heading fontSize="6xl" alignSelf="center" w="fit-content" m="auto" color={isDark ? "#BC6FF1" : "#FFE6F7"} >About</Heading>
 
                 <Flex alignSelf="center" alignItems="center" mt="50px" w="fit-content" direction={matches ? 'row' : 'column'}>
 
                     <Flex>
-                        <Heading color={isDark ? "#52057B": "#FFE6F7" }> Hii  </Heading>
+                        <Heading color={isDark ? "#52057B" : "#FFE6F7"}> Hii  </Heading>
                         <Image
                             src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif"
                             boxSize="50px"
                         ></Image>
-                        <Heading color={isDark ? "#52057B": "#FFE6F7" }> I'm </Heading>
+                        <Heading color={isDark ? "#52057B" : "#FFE6F7"}> I'm </Heading>
                     </Flex>
 
 
-                    <Heading ml="15px" fontStyle="italic" fontWeight="bold" bgGradient={isDark ?"linear(to-r, #52057B, #892CDC,#BC6FF1)": "linear(to-r, #C689C6, #FFABE1,#FFE6F7)"}  bgClip='text'> Benazir Sultana</Heading>
+                    <Heading ml="15px" fontStyle="italic" fontWeight="bold" bgGradient={isDark ? "linear(to-r, #52057B, #892CDC,#BC6FF1)" : "linear(to-r, #C689C6, #FFABE1,#FFE6F7)"} bgClip='text'> Benazir Sultana</Heading>
 
                 </Flex>
 
@@ -62,14 +62,14 @@ const Profile = () => {
 
 
             >
-                <Box color={isDark ? "#C689C6": "#FFE6F7" } fontSize="2xl" >
+                <Box color={isDark ? "#C689C6" : "#FFE6F7"} fontSize="2xl" >
 
                     <p>
-                        I'm a Fullstack Developer based in Kolkata,India.
+                        I am a Fullstack developer based in Kolkata, India.
                     </p>
-                    <p>My coding journey started unexpectedly in my third year of college in 2021. I went to college for Physics  but in our third year we had to do solve some physics problem using c and I thought writing code was so cool. I was hooked so I joined Masai school to learn web development. I've been training in masai since last year to acquire necessary skills .</p>
+                    <p>In 2021, during my third year in college, I unintentionally began my adventure toward coding. I studied physics in college, but in our third year, we had to use C language to solve some physics problems. I found writing code to be really exciting at the time. I entered the Masai School to study web development because I was really intrigued. Since last year, I have been training in Masai school to gain essential skills.</p>
 
-                    <p>Outside of work I like to spend my time reading books, drinking coffee and painting </p>
+                    <p>I enjoy reading books, sipping coffee, and drawing while I'm not working.</p>
 
                 </Box>
 

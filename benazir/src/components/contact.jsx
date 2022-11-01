@@ -15,19 +15,20 @@ export const Contact = ()=> {
             .addEventListener('change', e => setMatches(e.matches));
     }, []);
     return(
-        <div style={{marginTop :"200px"}}>
+        <div style={{marginTop :"200px", width:"100%"}}>
             <Heading color={isDark ? "#52057B": "#FFE6F7" }  fontSize="7xl" m="auto" w="fit-content"  >Contact</Heading>
             <Flex alignItems="center" direction={matches ? "row" : "column"} >
             <Image alignSelf='center' 
-                     
+                     width= "500px"
                      backgroundColor="aliceblack" 
                      bgClip="content-box"
-                     boxSize="500px" src={footergif}
+                      src={footergif}
                        
                  ></Image>
-                 <ContactForm />
                  
+                 <ContactForm />
         </Flex>
+        
         </div>
     )
 }

@@ -52,7 +52,7 @@ const Header = () => {
 
                     <Text fontSize="7xl" fontWeight="bold" bgGradient={isDark ?"linear(to-r, #52057B, #892CDC,#BC6FF1)": "linear(to-r, #C689C6, #FFABE1,#FFE6F7)"} bgClip='text'> {Name}</Text>
 
-                    <Text color={isDark ? "#BC6FF1": "#FFE6F7" }>Full Stack Web Developer with proficient Skilled in both Frontend and Backend Development for producing the Quality work</Text>
+                    <Text color={isDark ? "#BC6FF1": "#FFE6F7" }>Full Stack Web Developer capable of creating high-quality work who is skilled in both frontend and backend development.</Text>
 
                     <motion.button
                     style={{borderRadius:"10px", padding:"10px", color:isDark ? "#52057B": "#FFABE1" , border: isDark ? "1px solid #52057B": "1px solid #FFABE1", marginTop:" 8px",marginBottom:"10px", backgroundColor: isDark ? "#00000": "#937DC2" }}
