@@ -2,20 +2,13 @@ import { Text, Box, Circle, Flex, Stack, Heading } from "@chakra-ui/layout"
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Textarea, useColorMode } from '@chakra-ui/react'
 import { Button, Image } from "@chakra-ui/react"
 import React from "react"
-
+import { useMediaQuery } from '@chakra-ui/react'
 const Profile = () => {
     const { colorMode } = useColorMode()
-
+    const [isLargerThan800] = useMediaQuery('(min-width: 1200px)')
+    const [matches]=useMediaQuery('(min-width: 768px)')
     const isDark = colorMode === "dark";
-    const [matches, setMatches] = React.useState(
-        window.matchMedia("(min-width: 768px)").matches
-    )
-
-    React.useEffect(() => {
-        window
-            .matchMedia("(min-width: 768px)")
-            .addEventListener('change', e => setMatches(e.matches));
-    }, []);
+    
 
 
 
@@ -49,8 +42,11 @@ const Profile = () => {
 
 
             <Flex
-
-                direction={matches ? 'row' : 'column'}
+ 
+               
+              
+   direction={ isLargerThan800 ? "row":"column"}
+                
 
                 alignSelf={matches ? "flex-start" : "center"}
                 pl={matches ? "32" : "0"}

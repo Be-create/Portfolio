@@ -21,14 +21,14 @@ React.useEffect(() => {
   }
   
   return (
-      <Box w={matches ? '90%' : '100%'} mt="10"  >
+      <Box w={matches ? '90%' : '100%'} mt="10" mr= {matches ? "10" : "0" } >
         <form style={{  width: "100%",margin:matches ?"20px" : "5px",padding:matches ?"20px" : "5px"}} onSubmit={handleSubmit}>
         <input
         id="name"
         type="text" 
         name="name"
         placeholder='Please enter your name'
-        style={{display : "block",width : "100%", margin:"auto", marginBottom :"25px",height:"40px",border : isDark ? "1px solid #52057B": "1px solid #FFE6F7", backgroundColor :isDark ? "#892CDC" : "#FFABE1" }}
+        style={{display : "block",width : "100%", margin:"auto", marginBottom :"25px",height:"40px",border : isDark ? "2px solid #52057B": "2px solid #FFE6F7", backgroundColor :isDark ? "#892CDC" : "#FFABE1" }}
       />
       <ValidationError 
         prefix="Email" 
@@ -40,7 +40,7 @@ React.useEffect(() => {
         type="email" 
         name="email"
         placeholder='Enter your email Address'
-        style={{display : "block",width : "100%", margin:"auto", marginBottom :"25px",height:"40px", border : isDark ? "1px solid #52057B": "1px solid #FFE6F7", backgroundColor :isDark ? "#892CDC" : "#FFABE1" }}
+        style={{display : "block",width : "100%", margin:"auto", marginBottom :"25px",height:"40px", border : isDark ? "2px solid #52057B": "2px solid #FFE6F7", backgroundColor :isDark ? "#892CDC" : "#FFABE1" }}
       />
       <ValidationError 
         prefix="Email" 
@@ -51,7 +51,7 @@ React.useEffect(() => {
         id="message"
         name="message"
         placeholder ="Please enter your massage"
-        style={{display : "block", width : "100%", margin:"auto",height :"100px",color:"black",border : isDark ? "1px solid #52057B": "1px solid #FFE6F7", backgroundColor :isDark ? "#892CDC" : "#FFABE1" }}
+        style={{display : "block", width : "100%", margin:"auto",height :"100px",color:"black",border : isDark ? "2px solid #52057B": "2px solid #FFE6F7", backgroundColor :isDark ? "#892CDC" : "#FFABE1" }}
       />
       <ValidationError 
         prefix="Message" 

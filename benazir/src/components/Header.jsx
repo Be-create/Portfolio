@@ -8,14 +8,32 @@ import React from "react"
 import { motion, useScroll, useSpring } from "framer-motion"
 import { Button, Image } from "@chakra-ui/react"
 import headgif from "../assets/headgif.gif"
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import "./style.css"
+function Section({ children , time }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+
+  return (
+    <section ref={ref}>
+      <span
+        style={{
+          transform: isInView ? "none" : "translateX(-200px) ",
+          opacity: isInView ? 1 : 0,
+          transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${time}s`
+        }}
+      >
+        {children}
+      </span>
+    </section>
+  );
+}
 const Header = () => {
     const { colorMode } = useColorMode()
-    const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+    
+  
 
     const isDark = colorMode === "dark";
     
@@ -28,7 +46,7 @@ const Header = () => {
             .matchMedia("(min-width: 768px)")
             .addEventListener('change', e => setMatches(e.matches));
     }, []);
-  let Name = "Benazir sultana"
+  let Name = "Benazir Sultana"
     return (
         <motion.div initial="hidden"
         whileInView="visible"
@@ -48,11 +66,11 @@ const Header = () => {
 
                 <Box mt={matches ? "0" : "16"} alignSelf="flex-start"   >
 
-                    <Text color={isDark ? "#52057B": "#FFABE1" } fontSize="5xl" fontWeight="semibold">Hello, I am</Text>
+                    <Section time="0.5"><Text color={isDark ? "white": "#FFABE1" } fontSize="5xl" fontWeight="semibold">Hello, I am</Text></Section>
 
-                    <Text fontSize="7xl" fontWeight="bold" bgGradient={isDark ?"linear(to-r, #52057B, #892CDC,#BC6FF1)": "linear(to-r, #C689C6, #FFABE1,#FFE6F7)"} bgClip='text'> {Name}</Text>
+                    <Section time="0.7"><Text fontSize="7xl" fontWeight="bold"  bgGradient={isDark ?"linear(to-r, #52057B, #892CDC,#BC6FF1)": "linear(to-r, #C689C6, #FFABE1,#FFE6F7)"} bgClip='text'> {Name}</Text></Section>
 
-                    <Text color={isDark ? "#BC6FF1": "#FFE6F7" }>Full Stack Web Developer capable of creating high-quality work who is skilled in both frontend and backend development.</Text>
+                    <Text color={isDark ? "white": "#FFE6F7" }>Full Stack Web Developer capable of creating high-quality work who is skilled in both frontend and backend development.</Text>
 
                     <motion.button
                     style={{borderRadius:"10px", padding:"10px", color:isDark ? "#52057B": "#FFABE1" , border: isDark ? "1px solid #52057B": "1px solid #FFABE1", marginTop:" 8px",marginBottom:"10px", backgroundColor: isDark ? "#00000": "#937DC2" }}

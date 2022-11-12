@@ -18,9 +18,11 @@ import {useRef} from "react"
 import { Tools } from "./Tools";
 import { Projects } from "./projects";
 import { Contact } from "./contact";
+import background1 from "../assets/background6.svg"
+
 function Main() {
   const { colorMode, toggleColorMode } = useColorMode('dark')
-  const { scrollYProgress } = useScroll();
+  
    const isDark = colorMode === "dark"      
    const [matches, setMatches] = React.useState(
     window.matchMedia("(min-width: 768px)").matches
@@ -35,7 +37,7 @@ React.useEffect(() => {
 
   return (
    
-      <VStack p="5"className="App" backgroundColor={isDark ? "#000000": "#937DC2"}>
+      <VStack p="5"className="App" backgroundColor="black" backgroundImage={!isDark && background1 } backgroundPosition="center" backgroundAttachment="fixed">
         <Flex w ="100%" position="fixed" pl="5" pr="5"> 
         
         <Heading color={isDark ? "#52057B": "#C689C6" } >Benazir</Heading>
@@ -43,31 +45,31 @@ React.useEffect(() => {
         <Spacer></Spacer>
         {matches ? <Tabs variant='enclosed'  color={isDark ? "#52057B": "#FFABE1" }>
   <TabList>
-    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }} onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "white": "#FFE6F7" }} onClick={()=>{window.scrollTo(
       {
         top : 0,
         behavior : "smooth"
       }
     )}}>Home</Tab>
-    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "white": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
       {
         top : 800,
         behavior : "smooth"
       }
     )}}>About</Tab>
-    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "white": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
       {
         top : 1600,
         behavior : "smooth"
       }
     )}}>Skills</Tab>
-    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
+    <Tab _selected={{ color: isDark ? "white": "#FFE6F7" }}  onClick={()=>{window.scrollTo(
       {
         top : 2800,
         behavior : "smooth"
       }
     )}}>Project</Tab>
-    <Tab _selected={{ color: isDark ? "#BC6FF1": "#FFE6F7" }}  onClick={()=>{window.open(
+    <Tab _selected={{ color: isDark ? "white": "#FFE6F7" }}  onClick={()=>{window.open(
       "https://drive.google.com/drive/folders/12pBWjsLCsOa_6ahFUVTt23myEK-y4ZTe?usp=sharing"
     )}}>Resume</Tab>
   </TabList>
@@ -125,7 +127,7 @@ React.useEffect(() => {
     </MenuItem>
   </MenuList>
 </Menu>}
-        <IconButton ml={8}onClick={toggleColorMode} icon={isDark ? <FaSun style={{fill:"#52057B"}}/> : <FaMoon style={{fill:"darkorchid"}}/>}> Toggle {colorMode === 'light' ? 'Dark' : 'Light'}</IconButton>
+        {/*<IconButton ml={8}onClick={toggleColorMode} icon={isDark ? <FaSun style={{fill:"#52057B"}}/> : <FaMoon style={{fill:"darkorchid"}}/>}> Toggle {colorMode === 'light' ? 'Dark' : 'Light'}</IconButton>*/}
         
         </Flex>
         
