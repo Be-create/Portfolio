@@ -125,6 +125,11 @@ React.useEffect(() => {
     )}}>
       Contact
     </MenuItem>
+    <MenuItem  onClick={()=>{window.open(
+      "https://drive.google.com/drive/folders/12pBWjsLCsOa_6ahFUVTt23myEK-y4ZTe?usp=sharing"
+    )}}>
+      Resume
+    </MenuItem>
   </MenuList>
 </Menu>}
         {/*<IconButton ml={8}onClick={toggleColorMode} icon={isDark ? <FaSun style={{fill:"#52057B"}}/> : <FaMoon style={{fill:"darkorchid"}}/>}> Toggle {colorMode === 'light' ? 'Dark' : 'Light'}</IconButton>*/}
