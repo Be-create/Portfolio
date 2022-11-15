@@ -120,7 +120,7 @@ backgroundColor: isDark ? "darkorchid" : "rgba(76, 175, 80, 0.1)"
                 window.open("https://coschedule-clone-new.vercel.app/")
             }} >Live</Button>
             <Button style={{ backgroundColor: isDark ? "#52057B" : "#FFE6F7" }} onClick={() => {
-                window.open("https://github.com/Be-create/coSchedule_Clone")
+                window.open("https://github.com/Be-create/Coschedule_Clone_Fullstack")
             }}>Github</Button>
         </Flex>
     </Box>
