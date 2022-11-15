@@ -286,7 +286,7 @@ style={{ fontFamily: "serif" , marginBottom:"20px" }}
         <Image src="https://c.tenor.com/iczjaEFdW20AAAAC/spotify-music.gif" style={{ height: "85%", width: "100%" }} />
         <Flex justifyContent="space-evenly" >
             <Button style={{ backgroundColor: isDark ? "#52057B" : "#FFE6F7" }} onClick={() => {
-                window.open("https://new-spotify-clone.vercel.app/")
+                window.open("https://admirable-churros-26f716.netlify.app/")
             }}>Live</Button>
             <Button style={{ backgroundColor: isDark ? "#52057B" : "#FFE6F7" }} onClick={() => {
                 window.open("https://github.com/Be-create/Spotify")
